@@ -1,21 +1,28 @@
-from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.types import Date
-from . import Base
+from . import db
 
-class Artist(Base):
-    __tablename__ = "artista"
 
-    id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String(20))
-    dt_nascimento = Column(String(50))
+
+# class Artist(db.Model):
+#     __tablename__ = "artistas"
+
+#     id = db.Column(db.Integer, primary_key=True, index=True)
+#     nome = db.Column(db.String(20))
+#     generos = db.Column(db.String(50))
+#     children = db.relationship("VinylDisc")
     
     
-
-class VinylDisc(Base):
+class VinylDisc(db.Model):
     __tablename__ = "discos"
 
-    id = Column(Integer, primary_key=True, index=True)
-    genero = Column(String(20))
-    titulo = Column(String(50))
-    valor = Column(Float)
-    
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    genero = db.Column(db.String(20))
+    titulo = db.Column(db.String(50))
+    valor = db.Column(db.Float)
+    artista = db.Column(db.String(25))
+
+
+    def __repr___(self):
+        return 'VynilDisc(titulo=%s)' % self.titulo
+
+
+
