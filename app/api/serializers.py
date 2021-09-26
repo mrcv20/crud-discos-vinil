@@ -1,21 +1,27 @@
 from app import ma
+from ..models import *
 
 
-class DiscoSchema(ma.Schema):
+class DiscoSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        fields = ('id', 'genero', 'titulo', 'valor', 'artista')
+        model = VinylDisc
+        load_instance = True
+        include_fk = True
+        #Fields to skip during serialization
+        load_only = ("artista")
 
-
-
+disco_schema = DiscoSchema()
 discos_schema = DiscoSchema(many=True)
 
 
-# class VynilDiscSchema(SQLAlchemySchema):
-#     class Meta:
-#         model = VynilDisc
-#         load_instance = True
-#     id = auto_field()
-#     genero = auto_field()
-#     titulo = auto_field()
-#     valor = auto_field()
+class ArtistSchema(ma.SQLAlchemyAutoSchema):
+    discos = ma.Nested(DiscoSchema, many=True)
+    class Meta:
+        model = Artist
+        load_instance = True
+        include_fk = True
+
+artista_schema = ArtistSchema()
+artistas_schema = ArtistSchema(many=True)
+
 
