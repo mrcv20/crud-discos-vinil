@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_restx import Api
-from ..api import api01
+from ..api import apiv1
 
 blueprint = Blueprint("api", __name__, url_prefix="/api/v1")
 api = Api(blueprint,
@@ -9,7 +9,7 @@ api = Api(blueprint,
     description='Simples API com endpoints CRUD para uma loja ficticia de discos de vinil'
 )
 
-api01.vincula_ns_api(api)
+apiv1.vincula_ns_api(api)
 
 def create_api(app):
     app.register_blueprint(api.blueprint)
