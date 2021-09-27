@@ -15,7 +15,7 @@ Tecnologias:
 ## Requisitos de sistema
   python 3, MySQL Server/SQLite3
 
-## Iniciando um ambiente virtual
+## Preparando o ambiente virtual
 ```
 pip install virtualenv
 
@@ -24,7 +24,6 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-
 ## Instalando as dependências
 ```
 pip install -r requirements.txt
@@ -32,7 +31,7 @@ pip install -r requirements.txt
 
 ## Criação das tabelas e do banco de dados
 ```
-A criação das tabelas é feita automaticamente puxando um contexto
+A criação das tabelas é feita automaticamente puxando um contexto, assim que subimos a API
 ```
 
 ## Subindo a API
