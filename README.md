@@ -35,6 +35,7 @@ pip install -r requirements.txt
 No diretório raiz, digite os comandos:
 
 ```
+export FLASK_APP=app/run.py
 export FLASK_ENV=testing
 pytest -v tests/test_endpoints.py
 ```
