@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 
 ## Rodando os testes
-No diretório app, digite os comandos:
+No diretório raiz, digite os comandos:
 
 ```
 export FLASK_ENV=testing
