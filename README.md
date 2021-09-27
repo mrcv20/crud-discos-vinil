@@ -16,6 +16,7 @@ Tecnologias:
   python 3, MySQL Server/SQLite3
 
 ## Preparando o ambiente virtual
+Na pasta raiz digite os comandos
 ```
 pip install virtualenv
 
@@ -25,8 +26,17 @@ source env/bin/activate
 ```
 
 ## Instalando as dependências
+No diretório app, instale as bibliotecas com o pip
 ```
 pip install -r requirements.txt
+```
+
+## Rodando os testes
+No diretório app, digite os comandos:
+
+```
+export FLASK_ENV=testing
+pytest -v tests/test_endpoints.py
 ```
 
 ## Criação das tabelas e do banco de dados
