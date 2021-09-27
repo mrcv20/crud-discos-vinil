@@ -5,7 +5,7 @@ from ..api import apiv1
 blueprint = Blueprint("api", __name__, url_prefix="/api/v1")
 api = Api(blueprint,
     title='Loja de discos de vinil',
-    version='1.0',
+    version='2.0',
     description='Simples API com endpoints CRUD para uma loja ficticia de discos de vinil'
 )
 

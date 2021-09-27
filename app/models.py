@@ -14,6 +14,7 @@ class Artist(db.Model):
     def find_all(cls) -> List["Artist"]:
         return cls.query.all()
     
+    
     @classmethod
     def find_by_id(cls, _id) -> "Artist":
         return cls.query.filter_by(id=_id).first()
@@ -29,11 +30,6 @@ class Artist(db.Model):
     def delete_from_db(self) -> None:
         db.session.delete(self)
         db.session.commit()
-
-    def update_from_db(self) -> None:
-        db.session.delete(self)
-        db.session.commit()
-
 
 
 class VinylDisc(db.Model):
@@ -62,11 +58,6 @@ class VinylDisc(db.Model):
     def delete_from_db(self) -> None:
         db.session.delete(self)
         db.session.commit()
-
-    def update_db(self) -> None:
-        db.session.update(self)
-        db.session.commit()
-
 
 
 

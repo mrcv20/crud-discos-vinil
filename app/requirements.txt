@@ -1,6 +1,9 @@
 aniso8601==9.0.1
 attrs==21.2.0
+backports.entry-points-selectable==1.1.0
 click==8.0.1
+distlib==0.3.3
+filelock==3.0.12
 Flask==2.0.1
 flask-marshmallow==0.14.0
 flask-restx==0.5.1
@@ -15,6 +18,7 @@ marshmallow==3.13.0
 marshmallow-sqlalchemy==0.26.1
 mysqlclient==2.0.3
 packaging==21.0
+platformdirs==2.4.0
 pluggy==1.0.0
 py==1.10.0
 pyparsing==2.4.7
@@ -24,4 +28,5 @@ pytz==2021.1
 six==1.16.0
 SQLAlchemy==1.4.25
 toml==0.10.2
+virtualenv==20.8.1
 Werkzeug==2.0.1
