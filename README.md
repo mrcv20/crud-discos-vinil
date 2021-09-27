@@ -20,7 +20,7 @@ Na pasta raiz digite os comandos
 ```
 pip install virtualenv
 
-python3 -m venv env
+virtualenv ./env
 
 source env/bin/activate
 ```
@@ -47,7 +47,6 @@ A criação das tabelas é feita automaticamente puxando um contexto, assim que 
 ## Subindo a API
 ```
 export FLASK_APP=app/run.py
-export FLASK_DEBUG=True
 export FLASK_ENV=development
 flask run
 ```
